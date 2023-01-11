@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="prova.xsd">
+    <nome>Pippo</nome>
+    <cognome>Baudo</cognome>
+    <eta>10</eta>
+</Persona>
