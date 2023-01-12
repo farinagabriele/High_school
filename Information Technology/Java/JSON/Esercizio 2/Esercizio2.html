@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 2</title>
+    <script type="text/javascript">
+        let libri = [
+            {
+                "id": "01",
+                "linguaggio": "java",
+                "edizione": "seconda",
+                "autore": "Riccardo Nicolassy"
+            },
+            {
+                "id": "04",
+                "linguaggio": "PHP",
+                "edizione": "Terza",
+                "autore": "Paolo Campagni"
+            }
+
+        ];
+        // Stampa libri
+        document.write("<h1> Esempio 1b con JSON e JavaScript</h1>");
+        let x = 0;
+        for (x = 0; x < libri.length; x++)
+        {
+            document.write("<h3>id = "+ libri[x].id + " " + libri[x].edizione + " edizione");
+            document.write(" - Linguaggio = "+ libri[x].linguaggio + "</h3>");
+            document.write("<h3>Autore = "+ libri[x].autore + "</h3>");
+        }
+        document.write("<hr/>");
+        document.write(libri[1].linguaggio + " puoi studiarlo sul libro ");
+        document.write("scritto da " + libri[1].autore);
+        document.write("<hr/>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

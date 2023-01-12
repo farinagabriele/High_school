@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./stile.css">
+    <title>Document</title>
+    <script type="text/javascript">
+        document.writeln("<h2>Array di oggetti JSON</h2>");
+        let libri = {
+            "informatica": [
+                {
+                    "linguaggio": "C++",
+                    "autore": "Rossi",
+                    "prezzo": 15.50
+                },
+                {
+                    "linguaggio": "JavaScript",
+                    "autore": "Verdi",
+                    "prezzo": 17.50
+                },
+                {
+                    "linguaggio": "Java",
+                    "autore": "Bianchi",
+                    "prezzo": 12.50
+                }
+            ],
+            "cucina": [
+                {
+                    "lingua" : "italiano",
+                    "portata": "antipasti",
+                    "prezzo": 25.50
+                },
+                {
+                    "lingua" : "cinese",
+                    "portata": "dolci",
+                    "prezzo": 13.00
+                }
+            ]
+        };
+        let i = 0;
+        document.writeln("<table class='tabella1'><tr>");
+        for(i = 0; i < libri.informatica.length; i++)
+        {
+            document.writeln("<td>");
+            document.writeln("<table class='tabella2'>");
+            document.writeln("<tr><td><b>Linguaggio</b></td>"+
+                "<td>" + libri.informatica[i].linguaggio + "</td></tr>");
+            document.writeln("<tr><td><b>autore</b></td>"+
+                "<td>" + libri.informatica[i].autore + "</td></tr>");
+            document.writeln("<tr><td><b>prezzo</b></td>"+
+                "<td>" + libri.informatica[i].prezzo + "</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+        }
+
+        for(i = 0; i < libri.cucina.length; i++)
+        {
+            document.writeln("<td>");
+            document.writeln("<table class='tabella2'>");
+            document.writeln("<tr><td><b>Linguaggio</b></td>"+
+                "<td>" + libri.cucina[i].lingua + "</td></tr>");
+            document.writeln("<tr><td><b>autore</b></td>"+
+                "<td>" + libri.cucina[i].portata + "</td></tr>");
+            document.writeln("<tr><td><b>prezzo</b></td>"+
+                "<td>" + libri.cucina[i].prezzo + "</td></tr>");
+            document.writeln("</table>");
+            document.writeln("</td>");
+            
+        }
+        document.writeln("</table>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

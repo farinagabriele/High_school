@@ -1,0 +1,12 @@
+table.tabella1{
+    border: solid 2px;
+}
+
+table.tabella2{
+    border: solid 1px;
+}
+
+td{
+    border: solid 1px;
+    width: 100px;
+}
