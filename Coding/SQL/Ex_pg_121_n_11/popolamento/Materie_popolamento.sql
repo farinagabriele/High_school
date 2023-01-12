@@ -1,5 +1,5 @@
 INSERT INTO Materie (NomeMateria, NumeroOre)
-    VALUES ('Matematica', 4),
+    VALUES ('Informatica', 6),
            ('Inglese', 3),
            ('Italiano', 4),
            ('Storia', 2);

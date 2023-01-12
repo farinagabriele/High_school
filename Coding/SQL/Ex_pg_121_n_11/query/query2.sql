@@ -3,4 +3,5 @@
 SELECT Studenti.nome, Studenti.cognome
 FROM Studenti
 INNER JOIN Prove ON studenti.matricola = Prove.matricola
+INNER JOIN Materie ON Materie.Codice = Prove.Codice
 WHERE Prove.Data_prova LIKE "2020-03*" AND Materia.NomeMateria = materiaX;

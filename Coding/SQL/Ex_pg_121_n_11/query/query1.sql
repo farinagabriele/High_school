@@ -1,3 +1,3 @@
 SELECT nome, cognome, matricola
 FROM studenti
-WHERE indirizzo = "Roma";
+WHERE indirizzo LIKE "*Roma*";

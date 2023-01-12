@@ -1,0 +1,4 @@
+temp1 = Selezione di Materia su nome = NomeX
+temp2 = Selezione di Prove su Data_prova LIKE "2020-03*"
+temp3 = Join di temp1, temp2 su temp1.Codice = temp2.Codice
+temp4 = Join temp3, Studenti su temp3.matricola = Studenti.matricola
