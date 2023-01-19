@@ -2,4 +2,4 @@
 SELECT Materie.* 
 FROM Materie
 LEFT OUTER JOIN Prove ON Materie.Codice = Prove.Codice
-WHERE Prove.Matricola = NULL;
+WHERE Prove.Matricola IS NULL;
