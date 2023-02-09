@@ -1,0 +1,12 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "titolo",
+    "type": "object",
+    "properties": {
+        "chiave": {"type": "tipo"},
+        ...
+        ...,
+        "country": {"type": "string"}
+    },
+    "required": ["chiave", ..., "country"]
+}
