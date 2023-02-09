@@ -1,0 +1,12 @@
+{
+    "first_name": "Roberto",
+        "last_name": "Lurenti",
+        "phone": "+393143214578",
+        "address": {
+            "street": "via dell'Informatica",
+            "number": 123,
+            "city": "Roma",
+            "postcode": "00165",
+            "country": "Italy"
+        }
+}

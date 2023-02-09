@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "",
+    "type": "object",
+    "properties": {
+        "developer": {"type":"string"},
+        "e_mail": {"type": "string"},
+        "languages": {
+            "type": "array", 
+            "items": {"type": "string"}
+        }
+    },
+    "required": ["developer", "e_mail", "languages"]
+}

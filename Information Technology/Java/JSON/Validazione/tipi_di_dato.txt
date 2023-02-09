@@ -1,0 +1,8 @@
+Valid Data Types
+In JSON, values must be one of the following data types:
+-> string
+-> number
+-> object (JSON object)
+-> array
+-> boolean
+-> null

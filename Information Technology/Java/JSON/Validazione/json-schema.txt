@@ -1,3 +1,6 @@
+sito di validazione1: https://jsonschema.dev/
+sito di validazione2: https://jsonschemavalidator.net/
+
 {
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "titolo",
