@@ -4,3 +4,4 @@ CREATE TABLE Azienda( codice CHAR(10),
                       indirizzo VARCHAR(40),
                       settore VARCHAR(30) NOT NULL,
                       PRIMARY KEY(codice));
+                      

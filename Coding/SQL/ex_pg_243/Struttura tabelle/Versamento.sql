@@ -7,3 +7,4 @@ CREATE TABLE Versamento( id INT AUTO_INCREMENT,
                          PRIMARY KEY(id),
                          FOREIGN KEY(codice) REFERENCES Azienda(codice),
                          FOREIGN KEY(matricola) REFERENCES Dipendente(matricola));
+                         

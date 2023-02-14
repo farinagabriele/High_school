@@ -8,3 +8,4 @@ CREATE TABLE Dipendente (matricola CHAR(5),
                          totTratt FLOAT(8,2),
                          professione VARCHAR(30) NOT NULL,
                          PRIMARY KEY(matricola));
+                         

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var data = '{"employees":\n\
+  [{"908887" : {"firstName":"John", "lastName":"Doe"}},\n\
+   {"98764" : {"firstName":"Anna", "lastName":"Smith"}},\n\
+   { "98762" : {"firstName":"Peter", "lastName":"Jones"}}]}';  
+
+
+var empObj = JSON.parse(data);
+
+empObj.employees.forEach((item) => {
+  Object.entries(item).forEach(([key, val]) => {
+    console.log(`key-${key}-val-${JSON.stringify(val)}`)
+  });
+});
+    </script>
+</body>
+</html>
