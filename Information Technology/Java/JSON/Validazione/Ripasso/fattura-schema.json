@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Fattura",
+    "type": "object",
+    "description": "Ogni ricetta è suddivisa in 4 sezioni, ciascuna contenente i seguenti dati",
+    "properties": {
+        "sezione1": {
+            "nomeRegione": {"type": "string"},
+            "codiceIUP": {"type": "string", "pattern":"[0-9]{4}[A-Z]"}
+        }
+    },
+    "required": ["sezione1", "nomeRegione", "codiceIUP"],
+    "additionalProperties": false
+}
