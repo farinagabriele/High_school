@@ -1,0 +1,16 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Voce rubbrica telefonica",
+    "type": "object",
+    "properties": {
+        "name": {"type": "string"},
+        "phone": {"type": "array",
+                  "items": {"type": "string"},
+                  "minItems":1,
+                  "maxItems": 2,
+                  "uniqueItems": true
+                }
+    },
+    "required": ["name", "phone"],
+    "additionalProperties": false
+}

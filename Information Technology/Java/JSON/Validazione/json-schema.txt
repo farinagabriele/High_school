@@ -1,4 +1,4 @@
-sito di validazione1: https://jsonschema.dev/
+sito di validazione1 BUONO: https://jsonschema.dev/
 sito di validazione2: https://jsonschemavalidator.net/
 
 {

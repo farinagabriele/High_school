@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Ricetta medica",
+    "type": "object",
+    "properties": {
+        "Ricetta":{ "type": "object",
+        "properties": {
+            "sezione1": {"type": "object",
+            "properties": {
+                "nomeRegione": {"type": "string"},
+                "iup": {"type": "string", 
+                       "pattern": "[0-9]{4}[A-Z]"},
+                "numeroRicetta": {"type":"string",
+                                  "pattern": "[0-9]{10}"}
+            },
+            "required": ["nomeRegione", "iup", "numeroRicetta"],
+            "additionalProperties": false 
+            },
+            "sezione2": {"type": "object",
+            "properties": {
+                "nome": {"type":"string"},
+                "cognome":{"type":"string"},
+                "codiceFiscale": {"type":"string",
+                    "pattern": "[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]"},
+                "via":{"type":"string"},
+                "numeroCivico":{"type":"string"},
+                "cap": {"type":"string", 
+                    "pattern": "[0-9]{5}"},
+                "comune": {"type":"string"},
+                "provincia":{"type":"string"},
+                "infoEsenzioneTicket": {"type":"string"},
+                "asl": {"type": "integer"},
+                "tipologiaPrescrizione":{"type":"string"},
+                "prioritaPrescrizione":{"type":"string"}
+            },
+            "required": ["nome", "cognome", "codiceFiscale",
+             "via", "numeroCivico", "cap", "comune",
+             "provincia", "infoEsenzioneTicket", "asl",
+             "tipologiaPrescrizione", "prioritaPrescrizione"],
+             "additionalProperties": false   
+            },
+            "sezione3": {"type": "object",
+            "properties": {
+                "prescrizione": {"type": "array", 
+                "items": {"type":"object",
+                    "properties": {
+                        "descrizione":{"type":"string"},
+                        "qta":{"type":"integer"}
+                    }
+                }}
+            }
+            }
+        }
+            
+        }
+    }
+}

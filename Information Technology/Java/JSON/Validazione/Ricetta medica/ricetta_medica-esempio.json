@@ -1,0 +1,48 @@
+{
+    "Ricetta":{
+        "sezione1":{
+            "nomeRegione": "Lazio",
+            "iup": "1200A",
+            "numeroRicetta": "1233343453"
+        }
+    },
+    "sezione2":{
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "codiceFiscale": "RSMMRA86A23H501K",
+        "via": "via Roma",
+        "numeroCivico": "14",
+        "cap": "00146",
+        "comune": "Roma",
+        "provincia": "RM",
+        "infoEsenzioneTicket":{
+            "tipoEsenzione": "E01"
+        },
+        "asl": 203,
+        "tipologiaPrescrizione": "S",
+        "prioritaPrescrizione": "U"
+    },
+    "sezione3":{
+        "prescrizione":[
+            {
+                "descrizione": "visita cardiologica",
+                "qta": 1
+            },
+            {
+                "descrizione": "ecocardiogramma",
+                "qta": 1
+            }
+        ]
+    },
+    "sezione4":{
+        "quesitoDiagnostico": "ipertensione arteriosa",
+        "confezioniPrestazioni": "",
+        "prescrizione": "",
+        "tipoRicetta": "",
+        "codiceAutenticazione": "123456789012345678901234567890",
+        "data": "2022-11-05",
+        "codiceFiscaleMedico": "BNCNTN79R10H501K",
+        "nomeMedico": "Antonio",
+        "cognomeMedico": "Bianco"
+    }
+}

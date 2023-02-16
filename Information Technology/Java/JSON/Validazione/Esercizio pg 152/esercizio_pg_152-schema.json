@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Dato metereologico",
+    "type":"object",
+    "properties": {
+        "temperature":{
+            "type":"integer",
+            "minimum": -273,
+            "maximum": 50
+        },
+        "humidity":{
+            "type":"integer",
+            "minimum": 0,
+            "maximum": 50
+        },
+        "pressure":{
+            "type":"integer",
+            "minimum": 800,
+            "maximum": 1200
+        }
+    },
+    "required": ["temperature", "humidity", "pressure"],
+    "additionalProperties": false
+}
