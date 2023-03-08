@@ -1,14 +1,73 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
     "title": "Fattura",
+    "description": "una fattura è composta da tre parti: l'intestazione che contiene i dati anagrafici del destinatario e del mittente, la parte tabellare ed il piede",
     "type": "object",
-    "description": "Ogni ricetta è suddivisa in 4 sezioni, ciascuna contenente i seguenti dati",
     "properties": {
-        "sezione1": {
-            "nomeRegione": {"type": "string"},
-            "codiceIUP": {"type": "string", "pattern":"[0-9]{4}[A-Z]"}
+        "fattura": {
+            "type": "object",
+            "properties": {
+                "intestazione": {
+                    "type": "object",
+                    "properties": {
+                        "anagrafica_mittente": {
+                            "type": "object",
+                            "properties": {
+                                "nome": {"type": "string"},
+                                "cognome": {"type": "string"},
+                                "data_nascita": {"type": "string", "pattern": "[0-9]{4}[/][0-1][0-9][/][0-3][0-9]"},
+                                "citta_nascita": {"type": "string"},
+                                "codice_fiscale": {"type":"string", "pattern": "[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]"}
+                            },
+                            "required": ["nome", "cognome", "data_nascita", "citta_nascita", "codice_fiscale"],
+                            "additionalProperties": false
+                        },
+                        "anagrafica_destinatario": {
+                            "type": "object",
+                            "properties": {
+                                "nome": {"type": "string"},
+                                "cognome": {"type": "string"},
+                                "data_nascita": {"type": "string", "pattern": "[0-9]{4}[/][0-1][0-9][/][0-3][0-9]"},
+                                "citta_nascita": {"type": "string"},
+                                "codice_fiscale": {"type":"string", "pattern": "[A-Z]{6}[0-9]{2}[A-Z][0-9]{2}[A-Z][0-9]{3}[A-Z]"}
+                            },
+                            "required": ["nome", "cognome", "data_nascita", "citta_nascita", "codice_fiscale"],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["anagrafica_mittente", "anagrafica_destinatario"],
+                    "additionalProperties": false
+                },
+                "parte_tabellare": {
+                    "type": "array",
+                    "items": {"type": "object",
+                              "properties": {
+                                "qta": {"type": "integer"},
+                                "descrizione": {"type": "string"},
+                                "sconto": {"type": "number"},
+                                "prezzo_unitario": {"type": "number"},
+                                "importo": {"type": "number"},
+                                "Aliquota_IVA": {"type": "number"}
+                              },
+                              "required": ["qta", "descrizione", "sconto", "prezzo_unitario", "importo", "Aliquota_IVA"],
+                              "additionalProperties": false
+                    },
+                    "minItems": 1,
+                    "maxItems": 8      
+                },
+                "piede": {
+                    "type": "object",
+                    "properties": {
+                        
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                }
+            },
+            "required": [],
+            "additionalProperties": false
         }
     },
-    "required": ["sezione1", "nomeRegione", "codiceIUP"],
+    "required": [],
     "additionalProperties": false
 }
