@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Rubrica",
+    "description": "Schema di validazione di una rubrica",
+    "type": "object",
+    "properties": {
+        "rubrica": {
+            "type": "object",
+            "properties": {
+                "persona": {
+                    "type": "object",
+                    "properties": {
+                        "cognome": {"type": "string"},
+                        "nome": {"type": "string"},
+                        "telefono": {"type": "string"},
+                        "email": {
+                            "type": "string",
+                            "pattern": "[a-z]+[.][a-z]+[@][a-z]+[.][a-z]+"
+                        },
+                        "indirizzo": {
+                            "type": "object",
+                            "properties": {
+                                "via": {"type": "string"},
+                                "citta": {"type": "string"},
+                                "cap": {
+                                    "type": "string",
+                                    "pattern": "[0-9]{5}"
+                                },
+                                "stato": {"type": "string"}
+                            },
+                            "required": ["via", "citta", "cap", "stato"],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["cognome", "nome", "telefono", "email", "indirizzo"],
+                    "additionalProperties": false
+                }
+            },
+            "required": ["persona"],
+            "additionalProperties": false
+        }
+    },
+    "required": ["rubrica"],
+    "additionalProperties": false
+}

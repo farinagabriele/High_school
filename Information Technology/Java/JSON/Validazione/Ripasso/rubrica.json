@@ -1,0 +1,16 @@
+{
+    "rubrica": {
+        "persona": {
+            "cognome": "Tullio",
+            "nome": "Alberto",
+            "telefono": "+39 3274158796",
+            "email": "alberto.tullio@gmail.com",
+            "indirizzo": {
+                "via": "Via Inigo Campioni 57",
+                "citta": "Roma",
+                "cap": "00149",
+                "stato": "Italia"
+            }
+        }
+    }
+}
