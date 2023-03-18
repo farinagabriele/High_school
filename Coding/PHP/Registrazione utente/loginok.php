@@ -15,5 +15,6 @@
 <body>
     <h1>Benvenuto!</h1>
     <p>identificazione utente riuscita</p>
+    <p>Premi su <a href="logout.php">Logout</a> per disconnetterti</p>
 </body>
 </html>
