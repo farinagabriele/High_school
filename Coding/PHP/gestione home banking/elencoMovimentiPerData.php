@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php
     session_start();
-    if(!isset($_SESSION["codFisc"])){
+    if (!isset($_SESSION["codFisc"])){
         header("Location: login.html");
     }
 ?>
@@ -34,26 +34,44 @@
             $sql = "SELECT Movimenti.*
                     FROM Movimenti
                     INNER JOIN Conti ON Movimenti.NumeroConto = Conti.NumeroConto
-                    WHERE NumeroConto = '$numC' 
+                    WHERE Movimenti.NumeroConto = '$numC' 
                     AND Movimenti.DataRegistrazione BETWEEN '$data_inizio' AND '$data_fine'";
             
+            // Output in formato tabellare
             $result = $con->query($sql);
             if ($result->num_rows >= 1){
+                // Stampa
                 echo "<table>";
+                echo "<thead>";
+                echo "<th>ID</th>";
+                echo "<th>DataRegistrazione</th>";
+                echo "<th>CreditoDebito</th>";
+                echo "<th>Causale</th>";
+                echo "<th>Importo</th>";
+                echo "<th>NumeroConto</th>";
+                echo "</thead>";
+                echo "<tbody>";
+               
                 while ($row = $result->fetch_assoc()){
                     echo "<tr>";
-                    
+                    echo "<td>" . $row["ID"] ."</td>";
+                    echo "<td>" . $row["DataRegistrazione"] ."</td>";
+                    echo "<td>" . $row["CreditoDebito"] ."</td>";
+                    echo "<td>" . $row["Causale"] ."</td>";
+                    echo "<td>" . $row["Importo"] ."</td>";
+                    echo "<td>" . $row["NumeroConto"] ."</td>";
                     echo "</tr>";
                     
                 }
+                echo "</tbody>";
                 echo "</table>";
             }
 
-            
-            // Output
-            
             // Chiusura connessione
+            $result->free();
+            $con->close();
         }
     ?>
+    <p>Torna alla <a href="dashboard.html">Dashboard</a></p>
 </body>
 </html>

@@ -1,0 +1,19 @@
+Conti Correnti bancari e movimenti problema simula un’attività di home banking per 
+la consultazione dei movimenti di un conto corrente bancario. 
+Il database deve contenere due tabelle: 
+Conti, con l’identificativo del conto e i dati dell’intestatario;
+Movimenti, con le informazioni dei movimenti registrati sui conti.
+
+Conti (NumeroConto, Cognome, Nome, DataNascita, CodiceFiscale) 
+Movimenti (ID, DataRegistrazione, C/D (credito/debito), Causale, Importo, NumeroConto)
+
+NumeroConto e ID (autoincrementale) sono le chiavi primarie, NumeroConto in Movimenti è la chiave esterna. 
+La distinzione tra movimenti a credito o a debito può essere rappresentata anche 
+con il segno + o – davanti all’importo. 
+
+Il cliente della banca, dopo aver inserito il numero del proprio conto, 
+può consultare via Web le operazioni re-gistrate ottenendo i seguenti risultati:
+ 
+-elenco dei movimenti da data a data; 
+-elenco dei movimenti che contengono nella causale la parola “imposta” o “imposte” (suggerimento: usa una query SQL con la clausola Like); 
+-elenco dei movimenti aventi un importo superiore a una cifra prefissa
