@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esempio 1</title>
+</head>
+<body>
+    <font color="blue" size="4">
+        <strong>
+            HTML con AJAX: caricamento dinamico di documenti<br/>
+        </strong>
+    </font>
+    <hr/>
+    <div>
+        <button>Documento1</button>
+        <button>Documento2</button>
+        <button>Documento3</button>
+        <button>Documento4</button>
+    </div>
+    <hr/>
+    <div id="zonaDinamica">
+        <em>Qui viene caricato il documento scelto</em>
+    </div>
+    <hr/>
+    <font color="blue" size="3">Parte inferiore della pagina<br/></font>
+    <script type="text/javascript">
+        let documenti = document.getElementsByTagName("button");
+        for (let i = 0; i < documenti.length; i++)
+        {
+            documenti[i].onclick = caricaDocumento;
+        }
+
+        function caricaDocumento(e) 
+        {
+            // 
+            let httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = gestisciResponse;
+            /* Il metodo open() ha 3 parametri:
+                -il primo definisce il metodo HTTP da usare (GET/POST)
+                -il secondo è l'URL dove risiede lo script server-side
+                -il terzo (booleano) specifica che la richiesta dele essere asincrona
+            */
+           httpRequest.open("GET", "http://localhost/AJAX/" + e.target.innerHTML + ".htm", true);
+           // Invio dell request
+           httpRequest.send();
+        }
+
+        function gestisciResponse(e)
+        {
+            if (e.target.readyState == XMLHttpRequest.DONE && e.target.status == 200)
+            {
+                document.getElementById("zonaDinamica").innerHTML = e.target.responseText;
+            }
+
+        }
+    </script>
+</body>
+    
+</html>
